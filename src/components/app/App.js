@@ -1,6 +1,8 @@
 import logo from '../../logo.svg';
 import CardA from '../card-class/CardA';
 import CardB from '../card-function/CardB';
+import CardC from '../card-class/CardC';
+import CardD from '../card-function/CardD';
 import './App.css';
 
 // some random data
@@ -20,10 +22,15 @@ const users = [
 ]
 
 function App() {
+
+  const userData = users.map((user) => <CardA name={user.name} role={user.role} key={user.id}/>)
   return (
     <div>
-      {/* <CardA/>
-      <CardB/> */}
+      {/* <CardC/>
+      <CardD/> */}
+      {/* <CardA name={'Jame Doe'} role={'software engineer'}/>
+      <CardB name={'Godfrey'} role={'Archtecture'}/> */}
+      {userData}
     </div>
   );
 }
